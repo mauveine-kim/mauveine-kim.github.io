@@ -41,6 +41,15 @@
 var defined_dop_projects = [
 
   {
+    unreleased:true,
+    thumbnail: "TOP.jpg",
+    category:  "Short Documentary",
+    title:     "For A Taste of Persia",
+    position:  "Director of Photography",
+    credits:   "Produced by Yzael Sharif"
+  },
+
+  {
     link:      "https://youtu.be/qgGrbOM78Mg?si=q2Sys5EyB8931tLc",
     category:  "Short Film",
     title:     "Unseen Frames",
@@ -82,7 +91,17 @@ var defined_dop_projects = [
     position:  "Director of Photography",
     credits:   "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
   },
-
+  
+  {
+    unreleased:true,
+    thumbnail: "ER.jpg",
+    category:  "Feature-Length Documentary",
+    title:     "Elephant Remembers",
+    position:  "Camera, Social Media, & Editor",
+    credits:   "Produced by Fotis Begklis",
+    award:     "2025 Arts Awards Student and Staff Collaboration of the Year"
+  },
+  
   {
     link:      "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
     category:  "Live-Concert",
