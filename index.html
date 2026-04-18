@@ -7,7 +7,7 @@
     <meta name="description" content="Sunyu Kim — Director of Photography based in London & Berlin. Cinematography, Camera, Editing, Direction.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after {
             margin: 0;
@@ -26,9 +26,9 @@
             --white: #f0ece6;
             --accent: #c9a96e;
             --accent-dim: #8a7245;
-            --serif: 'Cormorant Garamond', 'Georgia', serif;
+            --serif: 'Playfair Display', 'Georgia', serif;
             --mono: 'DM Mono', 'Courier New', monospace;
-            --sans: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+            --sans: 'Avenir', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
         }
 
         html {
@@ -138,7 +138,7 @@
 
         .hero__name {
             font-family: var(--serif);
-            font-weight: 300;
+            font-weight: 500;
             font-size: clamp(3.5rem, 10vw, 8rem);
             line-height: 0.95;
             color: var(--white);
@@ -151,8 +151,8 @@
         }
 
         .hero__name em {
-            font-style: italic;
-            font-weight: 300;
+            font-style: normal;
+            font-weight: 500;
             color: var(--accent);
         }
 
@@ -419,9 +419,10 @@
         }
 
         .project-card__position {
-            font-family: var(--mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.1em;
+            font-family: var(--serif);
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 600;
+            line-height: 1.2;
             color: var(--text);
         }
 
