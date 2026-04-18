@@ -32,7 +32,7 @@ var defined_editing_projects = [
     thumbnail: "IC.jpg",
     category:  "Vertical Short-Form Series",
     title:     "I Cook",
-    position:  "Supervising Editor",
+    position:  "Supervising Editor & Director of Photography",
     credits:   "Produced by Sunyu Kim, Directed by Heather Jarek"
   }
   
