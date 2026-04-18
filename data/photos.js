@@ -18,11 +18,14 @@
 
 var defined_photos = [
 
-  "photo-01.jpg",
-  "photo-02.jpg",
-  "photo-03.jpg",
-  "photo-04.jpg",
-  "photo-05.jpg",
-  "photo-06.jpg"
+  "18-008 Large.jpeg",
+  "18-009 Large.jpeg",
+  "18-010 Large.jpeg",
+  "18-011 Large.jpeg",
+  "18-014 Large.jpeg",
+  "18-016 Large.jpeg",
+  "18-020 Large.jpeg",
+  "18-23 Large.jpeg",
+  "18-026 Large.jpeg"
 
 ];
