@@ -14,4 +14,4 @@
 
 var photo_count = 55;
 
-var photo_blacklist = [1, 2, 22, 23, 41];
+var photo_blacklist = [1, 2, 22, 23, 41, 42];
