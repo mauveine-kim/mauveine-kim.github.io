@@ -44,7 +44,7 @@ var defined_dop_projects = [
     unreleased:true,
     thumbnail: "TOP.jpg",
     category:  "Short Documentary",
-    title:     "For A Taste of Persia",
+    title:     "For The Taste of Persia",
     position:  "Director of Photography",
     credits:   "Produced by Yzael Sharif"
   },
