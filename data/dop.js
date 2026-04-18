@@ -60,7 +60,7 @@ var defined_dop_projects = [
 
   {
     link:      "https://www.instagram.com/p/DCjAwwPobUj/",
-    thumbnail: "i-cook.jpg",
+    thumbnail: "IC.jpg",
     category:  "Vertical Short-Form Series",
     title:     "I Cook",
     position:  "Director of Photography & Supervising Editor",
@@ -77,7 +77,7 @@ var defined_dop_projects = [
 
   {
     link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
-    thumbnail: "marginalice.jpg",
+    thumbnail: "MA.jpg",
     category:  "3D Animation",
     title:     "MarginAlice",
     position:  "Director of Photography (Live-Action)",
