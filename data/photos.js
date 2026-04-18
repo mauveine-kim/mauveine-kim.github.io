@@ -26,6 +26,8 @@ var defined_photos = [
   "18-016 Large.jpeg",
   "18-020 Large.jpeg",
   "18-023 Large.jpeg",
-  "18-026 Large.jpeg"
+  "18-026 Large.jpeg",
+  "18-027 Large.jpeg",
+  "18-044 Large.jpeg"
 
 ];
