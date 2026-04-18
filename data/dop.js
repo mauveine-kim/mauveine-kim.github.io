@@ -53,10 +53,10 @@ var defined_dop_projects = [
   
   {
     youtube:  "https://youtu.be/CuuKFYdM7F8?si=e0v_fHnwZq9oV-lZ",
-    category: "Short Documentary",
+    category: "Advertisement",
     title:    "Dizziak Advertisement",
     position: "Director of Photography",
     credits:  "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
-  },
+  }
   
 ];
