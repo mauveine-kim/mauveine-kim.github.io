@@ -1040,14 +1040,23 @@
         renderProjects('list-dop', defined_dop_projects);
         renderProjects('list-editing', defined_editing_projects);
 
-        /* ── Load Photos (001.jpg ~ photo_count.jpg, skip blacklist) ── */
+        /* ── Load Photos (001.jpg ~ photo_count.jpg, skip blacklist, randomize) ── */
         var photoSources = [];
         (function() {
             var grid = document.getElementById('photo-grid');
             var bl = typeof photo_blacklist !== 'undefined' ? photo_blacklist : [];
+            var indices = [];
             for (var i = 1; i <= photo_count; i++) {
                 if (bl.indexOf(i) !== -1) continue;
-                var filename = String(i).padStart(3, '0') + '.jpg';
+                indices.push(i);
+            }
+            /* Fisher-Yates shuffle */
+            for (var j = indices.length - 1; j > 0; j--) {
+                var k = Math.floor(Math.random() * (j + 1));
+                var tmp = indices[j]; indices[j] = indices[k]; indices[k] = tmp;
+            }
+            for (var n = 0; n < indices.length; n++) {
+                var filename = String(indices[n]).padStart(3, '0') + '.jpg';
                 var src = './assets/photos/' + filename;
                 photoSources.push(src);
                 var item = document.createElement('div');
