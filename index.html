@@ -59,23 +59,6 @@
             background-size: 128px 128px;
         }
 
-        /* ── Letterbox Bars ── */
-        .letterbox-top,
-        .letterbox-bottom {
-            position: fixed;
-            left: 0;
-            right: 0;
-            height: max(env(safe-area-inset-top, 0px), 3vh);
-            background: #000;
-            z-index: 100;
-            pointer-events: none;
-        }
-        .letterbox-top { top: 0; }
-        .letterbox-bottom {
-            bottom: 0;
-            height: max(env(safe-area-inset-bottom, 0px), 3vh);
-        }
-
         /* ── Viewfinder Corners ── */
         .viewfinder {
             position: fixed;
@@ -91,13 +74,13 @@
             border-color: var(--muted);
             border-style: solid;
         }
-        .viewfinder--tl { top: calc(3vh + 20px); left: 20px; }
+        .viewfinder--tl { top: 20px; left: 20px; }
         .viewfinder--tl::before { border-width: 1px 0 0 1px; }
-        .viewfinder--tr { top: calc(3vh + 20px); right: 20px; }
+        .viewfinder--tr { top: 20px; right: 20px; }
         .viewfinder--tr::before { border-width: 1px 1px 0 0; }
-        .viewfinder--bl { bottom: calc(3vh + 20px); left: 20px; }
+        .viewfinder--bl { bottom: 20px; left: 20px; }
         .viewfinder--bl::before { border-width: 0 0 1px 1px; }
-        .viewfinder--br { bottom: calc(3vh + 20px); right: 20px; }
+        .viewfinder--br { bottom: 20px; right: 20px; }
         .viewfinder--br::before { border-width: 0 1px 1px 0; }
 
         /* ── Scrollbar ── */
@@ -109,7 +92,7 @@
         .page {
             position: relative;
             min-height: 100vh;
-            padding: calc(3vh + 40px) 0;
+            padding: 40px 0;
         }
 
         .container {
@@ -231,7 +214,7 @@
         /* ── Timecode (top-right) ── */
         .timecode {
             position: fixed;
-            top: calc(3vh + 22px);
+            top: 22px;
             right: 60px;
             font-family: var(--mono);
             font-size: 0.6rem;
@@ -272,6 +255,14 @@
             gap: 0;
             margin-bottom: 3rem;
             border-bottom: 1px solid var(--surface);
+            overflow-x: auto;
+            overflow-y: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .tabs::-webkit-scrollbar {
+            display: none;
         }
 
         .tab-btn {
@@ -643,7 +634,7 @@
 
         /* ── Contact (bottom, big & bright) ── */
         .contact-section {
-            padding: clamp(80px, 16vh, 180px) 0 calc(3vh + 60px);
+            padding: clamp(80px, 16vh, 180px) 0 60px;
         }
 
         .contact-section .section__label {
@@ -762,7 +753,7 @@
 
         /* ── Footer ── */
         .footer {
-            padding: 3rem 0 calc(3vh + 40px);
+            padding: 3rem 0 40px;
             border-top: 1px solid var(--surface);
         }
 
@@ -832,10 +823,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Letterbox Bars -->
-    <div class="letterbox-top"></div>
-    <div class="letterbox-bottom"></div>
 
     <!-- Viewfinder Corners -->
     <div class="viewfinder viewfinder--tl"></div>
