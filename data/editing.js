@@ -25,6 +25,15 @@ var defined_editing_projects = [
     title:     "Roots and Shoots",
     position:  "Editor",
     credits:   "Produced by Fotis Begklis"
-  }
+  },
 
+  {
+    link:      "https://www.instagram.com/p/DCjAwwPobUj/",
+    thumbnail: "IC.jpg",
+    category:  "Vertical Short-Form Series",
+    title:     "I Cook",
+    position:  "Supervising Editor",
+    credits:   "Produced by Sunyu Kim, Directed by Heather Jarek"
+  }
+  
 ];
