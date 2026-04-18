@@ -844,16 +844,17 @@
         renderProjects('list-dop', defined_dop_projects);
         renderProjects('list-editing', defined_editing_projects);
 
-        /* ── Load Photos ── */
+        /* ── Load Photos (001.jpg ~ {photo_count}.jpg) ── */
         (function() {
             const grid = document.getElementById('photo-grid');
-            defined_photos.forEach(filename => {
-                const item = document.createElement('div');
+            for (var i = 1; i <= photo_count; i++) {
+                var filename = String(i).padStart(3, '0') + '.jpg';
+                var item = document.createElement('div');
                 item.className = 'photo-grid__item reveal';
-                item.innerHTML = '<img src="./assets/photos/' + esc(filename) + '" alt="Photograph" loading="lazy">';
+                item.innerHTML = '<img src="./assets/photos/' + filename + '" alt="Photograph" loading="lazy">';
                 grid.appendChild(item);
                 observer.observe(item);
-            });
+            }
         })();
 
         /* ── Tabs ── */
