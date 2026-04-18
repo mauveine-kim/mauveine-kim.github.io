@@ -57,6 +57,23 @@ var defined_dop_projects = [
     title:    "Dizziak Advertisement",
     position: "Director of Photography",
     credits:  "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
+  },
+  
+  {
+    youtube:  "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
+    category: "Live-Concert",
+    title:    "Dog Saints at The George Tavern",
+    position: "Director of Photography",
+    credits:  "Produced by Sunyu Kim"
+  },
+  
+  {
+    youtube:  "https://youtu.be/4MdxOwCse2o?si=O5n3rJzKMRvhElys",
+    category: "Short Documentary",
+    title:    "The London I Saw",
+    position: "Extra Footage Camera Operator",
+    credits:  "Produced by Eliza Salnikova",
+    award:    "Royal Television Society Student TV Awards 2025 - Editing"
   }
   
 ];
