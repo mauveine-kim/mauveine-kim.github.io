@@ -14,4 +14,4 @@
 
 var photo_count = 55;
 
-var photo_blacklist = [];
+var photo_blacklist = [041];
