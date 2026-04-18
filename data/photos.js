@@ -12,6 +12,6 @@
  * 예: 3번과 7번 사진을 숨기려면 → var photo_blacklist = [3, 7];
  */
 
-var photo_count = 55;
+var photo_count = 54;
 
-var photo_blacklist = [041];
+var photo_blacklist = [41];
