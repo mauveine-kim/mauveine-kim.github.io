@@ -86,6 +86,7 @@ var defined_dop_projects = [
 
   {
     link:      "https://youtu.be/CuuKFYdM7F8?si=e0v_fHnwZq9oV-lZ",
+    thumbnail: "DIZ.jpg",
     category:  "Advertisement",
     title:     "Dizziak Advertisement",
     position:  "Director of Photography",
