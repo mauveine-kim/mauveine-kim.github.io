@@ -23,8 +23,8 @@ var defined_editing_projects = [
     category: "Short Film",
     title:    "Dreams",
     position: "Editor, VFX, & Sound Design",
-    credits:  "Produced by Ester Levin"
-    award:    "Febuary 2026 Absurd Film Festival Best Drama Winner "
+    credits:  "Produced by Ester Levin",
+    award:    "Febuary 2026 Absurd Film Festival Best Drama Winner"
   },
 
   {
