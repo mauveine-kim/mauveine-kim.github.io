@@ -10,4 +10,4 @@
  *     → 001.jpg, 002.jpg, 003.jpg, 004.jpg, 005.jpg 를 불러옵니다.
  */
 
-var photo_count = 11;
+var photo_count = 55;
