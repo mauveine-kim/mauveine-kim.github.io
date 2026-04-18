@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sunyu Kim — Director of Photography</title>
     <meta name="description" content="Sunyu Kim — Director of Photography based in London & Berlin. Cinematography, Camera, Editing, Direction.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,13 +65,16 @@
             position: fixed;
             left: 0;
             right: 0;
-            height: 3vh;
+            height: max(env(safe-area-inset-top, 0px), 3vh);
             background: #000;
             z-index: 100;
             pointer-events: none;
         }
         .letterbox-top { top: 0; }
-        .letterbox-bottom { bottom: 0; }
+        .letterbox-bottom {
+            bottom: 0;
+            height: max(env(safe-area-inset-bottom, 0px), 3vh);
+        }
 
         /* ── Viewfinder Corners ── */
         .viewfinder {
@@ -337,6 +340,9 @@
         @media (max-width: 768px) {
             .project-card {
                 grid-template-columns: 1fr;
+            }
+            .project-card__thumbnail {
+                aspect-ratio: 16 / 9;
             }
         }
 
