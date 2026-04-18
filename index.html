@@ -326,6 +326,8 @@
             border: 1px solid var(--surface);
             padding: 2px;
             transition: border-color 0.5s ease;
+            text-decoration: none;
+            color: inherit;
         }
 
         .project-card:hover {
@@ -723,96 +725,19 @@
                     <button class="tab-btn" data-tab="photo">Still Photography</button>
                 </div>
 
-                <!-- Tab: Director of Photography -->
+                <!-- Tab: Director of Photography (loaded from data/dop.js) -->
                 <div class="tab-panel is-active" id="tab-dop">
-                    <div class="project-list">
-
-                        <div class="project-card reveal">
-                            <div class="project-card__thumbnail">
-                                <img src="./assets/thumbnails/unseen-frames.jpg" alt="Unseen Frames">
-                                <div class="project-card__play"><div class="project-card__play-icon"></div></div>
-                            </div>
-                            <div class="project-card__info">
-                                <span class="project-card__category">Short Film</span>
-                                <h3 class="project-card__title">Unseen Frames</h3>
-                                <span class="project-card__position">Director of Photography</span>
-                                <span class="project-card__credits">Produced by Ian Fleming</span>
-                                <span class="project-card__award">2025 UAL BAFTV Best Lighting Winner</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card reveal">
-                            <div class="project-card__thumbnail">
-                                <img src="./assets/thumbnails/hollow-light.jpg" alt="Hollow Light">
-                                <div class="project-card__play"><div class="project-card__play-icon"></div></div>
-                            </div>
-                            <div class="project-card__info">
-                                <span class="project-card__category">Documentary</span>
-                                <h3 class="project-card__title">Hollow Light</h3>
-                                <span class="project-card__position">Director of Photography</span>
-                                <span class="project-card__credits">Directed by Clara Voss</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card reveal">
-                            <div class="project-card__thumbnail">
-                                <img src="./assets/thumbnails/between-stations.jpg" alt="Between Stations">
-                                <div class="project-card__play"><div class="project-card__play-icon"></div></div>
-                            </div>
-                            <div class="project-card__info">
-                                <span class="project-card__category">Music Video</span>
-                                <h3 class="project-card__title">Between Stations</h3>
-                                <span class="project-card__position">Director of Photography</span>
-                                <span class="project-card__credits">Artist: Juno Park</span>
-                            </div>
-                        </div>
-
-                    </div>
+                    <div class="project-list" id="list-dop"></div>
                 </div>
 
-                <!-- Tab: Editing -->
+                <!-- Tab: Editing (loaded from data/editing.js) -->
                 <div class="tab-panel" id="tab-editing">
-                    <div class="project-list">
-
-                        <div class="project-card reveal">
-                            <div class="project-card__thumbnail">
-                                <img src="./assets/thumbnails/still-water.jpg" alt="Still Water">
-                                <div class="project-card__play"><div class="project-card__play-icon"></div></div>
-                            </div>
-                            <div class="project-card__info">
-                                <span class="project-card__category">Short Film</span>
-                                <h3 class="project-card__title">Still Water</h3>
-                                <span class="project-card__position">Editor</span>
-                                <span class="project-card__credits">Directed by Maren Holt</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card reveal">
-                            <div class="project-card__thumbnail">
-                                <img src="./assets/thumbnails/after-image.jpg" alt="After Image">
-                                <div class="project-card__play"><div class="project-card__play-icon"></div></div>
-                            </div>
-                            <div class="project-card__info">
-                                <span class="project-card__category">Commercial</span>
-                                <h3 class="project-card__title">After Image</h3>
-                                <span class="project-card__position">Editor</span>
-                                <span class="project-card__credits">Produced by Studio North</span>
-                            </div>
-                        </div>
-
-                    </div>
+                    <div class="project-list" id="list-editing"></div>
                 </div>
 
-                <!-- Tab: Still Photography -->
+                <!-- Tab: Still Photography (loaded from data/photos.js) -->
                 <div class="tab-panel" id="tab-photo">
-                    <div class="photo-grid">
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-01.jpg" alt="Photograph"></div>
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-02.jpg" alt="Photograph"></div>
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-03.jpg" alt="Photograph"></div>
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-04.jpg" alt="Photograph"></div>
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-05.jpg" alt="Photograph"></div>
-                        <div class="photo-grid__item reveal"><img src="./assets/photos/photo-06.jpg" alt="Photograph"></div>
-                    </div>
+                    <div class="photo-grid" id="photo-grid"></div>
                 </div>
 
             </section>
@@ -852,9 +777,13 @@
         </div>
     </div>
 
+    <!-- Data files (edit these to manage content) -->
+    <script src="./data/dop.js"></script>
+    <script src="./data/editing.js"></script>
+    <script src="./data/photos.js"></script>
+
     <script>
         /* ── Scroll Reveal ── */
-        const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -863,7 +792,69 @@
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        reveals.forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        /* ── Helpers ── */
+        function getYouTubeId(url) {
+            const match = url.match(/(?:v=|\/embed\/|youtu\.be\/|\/v\/|\/shorts\/)([a-zA-Z0-9_-]{11})/);
+            return match ? match[1] : null;
+        }
+
+        function esc(str) { return (str || '').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+
+        function buildProjectCard(project) {
+            const videoId = getYouTubeId(project.youtube || '');
+            const thumb = videoId ? 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg' : '';
+            const youtubeUrl = videoId ? 'https://www.youtube.com/watch?v=' + videoId : '#';
+
+            const awardHtml = project.award
+                ? '<span class="project-card__award">' + esc(project.award) + '</span>'
+                : '';
+
+            const card = document.createElement('a');
+            card.href = youtubeUrl;
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+            card.className = 'project-card reveal';
+            card.innerHTML =
+                '<div class="project-card__thumbnail">' +
+                    '<img src="' + thumb + '" alt="' + esc(project.title) + '" loading="lazy">' +
+                    '<div class="project-card__play"><div class="project-card__play-icon"></div></div>' +
+                '</div>' +
+                '<div class="project-card__info">' +
+                    '<span class="project-card__category">' + esc(project.category) + '</span>' +
+                    '<h3 class="project-card__title">' + esc(project.title) + '</h3>' +
+                    '<span class="project-card__position">' + esc(project.position) + '</span>' +
+                    '<span class="project-card__credits">' + esc(project.credits) + '</span>' +
+                    awardHtml +
+                '</div>';
+            return card;
+        }
+
+        function renderProjects(containerId, projects) {
+            const container = document.getElementById(containerId);
+            projects.forEach(p => {
+                const card = buildProjectCard(p);
+                container.appendChild(card);
+                observer.observe(card);
+            });
+        }
+
+        /* ── Render from data files ── */
+        renderProjects('list-dop', defined_dop_projects);
+        renderProjects('list-editing', defined_editing_projects);
+
+        /* ── Load Photos ── */
+        (function() {
+            const grid = document.getElementById('photo-grid');
+            defined_photos.forEach(filename => {
+                const item = document.createElement('div');
+                item.className = 'photo-grid__item reveal';
+                item.innerHTML = '<img src="./assets/photos/' + esc(filename) + '" alt="Photograph" loading="lazy">';
+                grid.appendChild(item);
+                observer.observe(item);
+            });
+        })();
 
         /* ── Tabs ── */
         const tabBtns = document.querySelectorAll('.tab-btn');
