@@ -44,6 +44,7 @@ var defined_dop_projects = [
 
   {
     unreleased:true,
+    status:    "In Post-Production",
     thumbnail: "TOP.jpg",
     category:  "Short Documentary",
     title:     "For the Taste of Persia",
@@ -97,6 +98,7 @@ var defined_dop_projects = [
   
   {
     unreleased:true,
+    status:    "In Production",
     thumbnail: "ER.jpg",
     category:  "Feature-Length Documentary",
     title:     "Elephant Remembers",
