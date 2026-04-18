@@ -215,17 +215,21 @@
         }
 
         .hero__scroll-arrow {
-            width: 12px;
-            height: 12px;
-            border-right: 1.5px solid var(--muted);
-            border-bottom: 1.5px solid var(--muted);
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-right: 1.5px solid var(--light);
+            border-bottom: 1.5px solid var(--light);
             transform: rotate(45deg);
-            animation: arrowDown 1.5s ease-in-out infinite;
+        }
+
+        .hero__scroll-cue {
+            animation: fadeIn 1s ease 2s forwards, arrowDown 1.5s ease-in-out 2s infinite;
         }
 
         @keyframes arrowDown {
-            0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.4; }
-            50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
         }
 
         /* ── Timecode (top-right) ── */
@@ -631,6 +635,10 @@
 
         .lightbox__nav--prev::after { transform: rotate(135deg); margin-left: 4px; }
         .lightbox__nav--next::after { transform: rotate(-45deg); margin-right: 4px; }
+
+        @media (max-width: 768px) {
+            .lightbox__nav { display: none; }
+        }
 
         /* ── Unreleased Badge ── */
         .project-card--unreleased {
@@ -1104,6 +1112,23 @@
                 if (e.key === 'ArrowLeft') navigate(-1);
                 if (e.key === 'ArrowRight') navigate(1);
             });
+
+            /* Swipe support */
+            var touchStartX = 0;
+            var touchStartY = 0;
+
+            lightbox.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].clientX;
+                touchStartY = e.changedTouches[0].clientY;
+            }, { passive: true });
+
+            lightbox.addEventListener('touchend', function(e) {
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                var dy = e.changedTouches[0].clientY - touchStartY;
+                if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+                if (dx > 0) navigate(-1);
+                else navigate(1);
+            }, { passive: true });
         })();
 
         /* ── Tabs ── */
