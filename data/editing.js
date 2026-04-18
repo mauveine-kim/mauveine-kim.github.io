@@ -19,19 +19,20 @@
 var defined_editing_projects = [
 
   {
-    youtube:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    youtube:  "https://youtu.be/pWv0mbeIi3I?si=WO7s__mqqM5VXSXH",
     category: "Short Film",
-    title:    "Still Water",
-    position: "Editor",
-    credits:  "Directed by Maren Holt"
+    title:    "Dreams",
+    position: "Editor, VFX, & Sound Design",
+    credits:  "Produced by Ester Levin"
+    award:    "Febuary 2026 Absurd Film Festival Best Drama Winner "
   },
 
   {
-    youtube:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    category: "Commercial",
-    title:    "After Image",
+    youtube:  "https://youtu.be/n0NIlDC9T4g?si=kqNgLOZKPMizpkHL",
+    category: "Short Documentary",
+    title:    "Roots and Shoots",
     position: "Editor",
-    credits:  "Produced by Studio North"
+    credits:  "Produced by Fotis Begklis"
   }
 
 ];
