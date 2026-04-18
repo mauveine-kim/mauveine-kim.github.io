@@ -17,6 +17,7 @@
  *     credits:    Producer/Director credit
  *     award:      (Optional) Award info — delete this line if none
  *     unreleased: (Optional) set to true for unreleased projects (no link, shows "Unreleased" badge)
+ *     status:     (Optional, unreleased only) e.g. "In Post-Production" — shown on thumbnail hover
  *
  *   Example (released):
  *   {
@@ -30,6 +31,7 @@
  *   Example (unreleased):
  *   {
  *     unreleased: true,
+ *     status:     "In Post-Production",
  *     thumbnail:  "my-film-thumb.jpg",
  *     category:   "Feature Film",
  *     title:      "Upcoming Project",

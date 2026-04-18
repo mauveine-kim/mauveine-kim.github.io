@@ -657,6 +657,32 @@
             margin-top: 4px;
         }
 
+        .project-card__status {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-card__status {
+            opacity: 1;
+        }
+
+        .project-card__status-text {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+            border: 1.5px solid rgba(255,255,255,0.8);
+            border-radius: 24px;
+            padding: 12px 24px;
+        }
+
         /* ── Contact (bottom, big & bright) ── */
         .contact-section {
             padding: clamp(80px, 16vh, 180px) 0 60px;
@@ -997,9 +1023,14 @@
                 ? '<span class="project-card__unreleased-badge">Unreleased</span>'
                 : '';
 
-            var playOverlay = isUnreleased
-                ? ''
-                : '<div class="project-card__play"><div class="project-card__play-icon"></div></div>';
+            var playOverlay;
+            if (isUnreleased && project.status) {
+                playOverlay = '<div class="project-card__status"><span class="project-card__status-text">' + esc(project.status) + '</span></div>';
+            } else if (isUnreleased) {
+                playOverlay = '';
+            } else {
+                playOverlay = '<div class="project-card__play"><div class="project-card__play-icon"></div></div>';
+            }
 
             var tag = isUnreleased ? 'div' : 'a';
             var card = document.createElement(tag);
