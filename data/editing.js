@@ -45,6 +45,14 @@ var defined_editing_projects = [
   },
 
   {
+    link:      "https://www.youtube.com/watch?v=XUmpkVZd1P8",
+    category:  "Short Film",
+    title:     "Filmmaking Intelligence",
+    position:  "Editor & Director of Photography",
+    credits:   "Produced by Aashika Mamgain and Sunyu Kim, Directed by Heather Jarek"
+  },
+  
+  {
     link:      "https://youtu.be/19qQ3qHKrDU?si=0PH7bsf5kWeyUl-A",
     category:  "Review",
     title:     "영화같은 동영상을 위한 도구 - 모먼트(Moment) 애너모픽 렌즈 리뷰",
