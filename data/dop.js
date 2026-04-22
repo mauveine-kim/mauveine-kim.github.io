@@ -131,7 +131,15 @@ var defined_dop_projects = [
     credits:   "Produced by Eliza Salnikova",
     award:     "Royal Television Society Student TV Awards 2025 - Editing"
   },
-
+  
+  {
+    link:      "https://youtu.be/19qQ3qHKrDU?si=0PH7bsf5kWeyUl-A",
+    category:  "Review",
+    title:     "영화같은 동영상을 위한 도구 - 모먼트(Moment) 애너모픽 렌즈 리뷰",
+    position:  "Director of Photography & Editor",
+    credits:   "Produced, Written, and Directed by Sunyu Kim",
+  },
+  
   {
     link:      "https://youtu.be/q6qsEIt9rYg?si=OWqCJeLcy5PpmqkC&t=5",
     category:  "Advertisement",
