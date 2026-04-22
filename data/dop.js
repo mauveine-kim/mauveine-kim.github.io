@@ -69,15 +69,6 @@ var defined_dop_projects = [
     position:  "Director of Photography & Supervising Editor",
     credits:   "Produced by Sunyu Kim, Directed by Heather Jarek and Eliza Salnikova"
   },
-
-  {
-    link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
-    thumbnail: "MA.jpg",
-    category:  "3D Animation",
-    title:     "MarginAlice",
-    position:  "Director of Photography (Live-Action)",
-    credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
-  },
   
   {
     link:      "https://youtu.be/BSrgDQrSE0s?si=onwEPyoDvhTue9fj",
@@ -137,6 +128,15 @@ var defined_dop_projects = [
     title:     "Filmmaking Intelligence",
     position:  "Director of Photography & Editor",
     credits:   "Produced by Aashika Mamgain and Sunyu Kim, Directed by Heather Jarek"
+  },
+  
+  {
+    link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
+    thumbnail: "MA.jpg",
+    category:  "3D Animation",
+    title:     "MarginAlice",
+    position:  "Director of Photography (Live-Action)",
+    credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
   },
   
   {
