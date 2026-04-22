@@ -130,6 +130,14 @@ var defined_dop_projects = [
     position:  "Extra Footage Camera Operator",
     credits:   "Produced by Eliza Salnikova",
     award:     "Royal Television Society Student TV Awards 2025 - Editing"
+  },
+
+  {
+    link:      "https://youtu.be/q6qsEIt9rYg?si=OWqCJeLcy5PpmqkC&t=5",
+    category:  "Advertisement",
+    title:     "BICC Promotional Film",
+    position:  "Director of Photography and Editor",
+    credits:   "Produced by Chris Berwick, Written and Directed by Sunyu Kim"
   }
 
 ];
