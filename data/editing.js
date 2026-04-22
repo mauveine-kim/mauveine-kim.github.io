@@ -18,7 +18,15 @@ var defined_editing_projects = [
     credits:   "Produced by Ester Levin",
     award:     "Febuary 2026 Absurd Film Festival Best Drama Winner"
   },
-
+  
+  {
+    link:      "https://youtu.be/gIi04r7BIA4?si=xbHnQag-mV21NRxV",
+    category:  "Visual Essay",
+    title:     "Subtitle and Dubbing: The Fine Balance Between The Artistic Vision and Accessibility?",
+    position:  "Editor, Writer, and Presenter",
+    credits:   "Produced by Sunyu Kim"
+  },
+  
   {
     link:      "https://youtu.be/n0NIlDC9T4g?si=kqNgLOZKPMizpkHL",
     category:  "Short Documentary",
@@ -34,14 +42,6 @@ var defined_editing_projects = [
     title:     "I Cook",
     position:  "Supervising Editor & Director of Photography",
     credits:   "Produced by Sunyu Kim, Directed by Heather Jarek and Eliza Salnikova"
-  },
-
-  {
-    link:      "https://youtu.be/gIi04r7BIA4?si=xbHnQag-mV21NRxV",
-    category:  "Visual Essay",
-    title:     "Subtitle and Dubbing: The Fine Balance Between The Artistic Vision and Accessibility?",
-    position:  "Editor, Writer, and Presenter",
-    credits:   "Produced by Sunyu Kim"
   }
   
 ];
