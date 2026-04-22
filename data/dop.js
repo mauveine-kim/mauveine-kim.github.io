@@ -71,14 +71,6 @@ var defined_dop_projects = [
   },
 
   {
-    link:      "https://youtu.be/BSrgDQrSE0s?si=onwEPyoDvhTue9fj",
-    category:  "Short Film",
-    title:     "The Void",
-    position:  "Director of Photography",
-    credits:   "Produced and Directed by Eliza Salnikova"
-  },
-
-  {
     link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
     thumbnail: "MA.jpg",
     category:  "3D Animation",
@@ -86,7 +78,15 @@ var defined_dop_projects = [
     position:  "Director of Photography (Live-Action)",
     credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
   },
-
+  
+  {
+    link:      "https://youtu.be/BSrgDQrSE0s?si=onwEPyoDvhTue9fj",
+    category:  "Short Film",
+    title:     "The Void",
+    position:  "Director of Photography",
+    credits:   "Produced and Directed by Eliza Salnikova"
+  },
+  
   {
     link:      "https://youtu.be/CuuKFYdM7F8?si=e0v_fHnwZq9oV-lZ",
     thumbnail: "DIZ.jpg",
@@ -94,14 +94,6 @@ var defined_dop_projects = [
     title:     "Dizziak Advertisement",
     position:  "Director of Photography",
     credits:   "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
-  },
-  
-  {
-    link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
-    category:  "Short Film",
-    title:     "A New World",
-    position:  "Director of Photography",
-    credits:   "Produced by Reuben Carroll-Reid, Directed by Eliza Salnikova"
   },
   
   {
@@ -116,6 +108,14 @@ var defined_dop_projects = [
   },
   
   {
+    link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
+    category:  "Short Film",
+    title:     "A New World",
+    position:  "Director of Photography",
+    credits:   "Produced by Reuben Carroll-Reid, Directed by Eliza Salnikova"
+  },
+  
+  {
     link:      "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
     category:  "Live-Concert",
     title:     "Dog Saints at The George Tavern",
@@ -123,6 +123,22 @@ var defined_dop_projects = [
     credits:   "Produced by Sunyu Kim"
   },
 
+  {
+    link:      "https://youtu.be/rRAVlv0GYyE?si=Eeo1_wyl2fuGtab2",
+    category:  "Short Documentary",
+    title:     "A Lens on London's Wildlife",
+    position:  "Director of Photography",
+    credits:   "Produced by Sunyu Kim, Directed by Madeleine Lavers",
+  },
+
+  {
+    link:      "https://www.youtube.com/watch?v=XUmpkVZd1P8",
+    category:  "Short Film",
+    title:     "Filmmaking Intelligence",
+    position:  "Director of Photography & Editor",
+    credits:   "Produced by Aashika Mamgain and Sunyu Kim, Directed by Heather Jarek"
+  },
+  
   {
     link:      "https://youtu.be/4MdxOwCse2o?si=O5n3rJzKMRvhElys",
     category:  "Short Documentary",
