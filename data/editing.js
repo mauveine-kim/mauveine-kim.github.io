@@ -42,7 +42,6 @@ var defined_editing_projects = [
     title:     "Subtitle and Dubbing: The Fine Balance Between The Artistic Vision and Accessibility?",
     position:  "Editor, Writer, and Presenter",
     credits:   "Produced by Sunyu Kim"
-
   }
   
 ];
