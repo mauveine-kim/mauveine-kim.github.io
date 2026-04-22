@@ -136,7 +136,7 @@ var defined_dop_projects = [
     link:      "https://youtu.be/q6qsEIt9rYg?si=OWqCJeLcy5PpmqkC&t=5",
     category:  "Advertisement",
     title:     "BICC Promotional Film",
-    position:  "Director of Photography and Editor",
+    position:  "Director of Photography & Editor",
     credits:   "Produced by Chris Berwick, Written and Directed by Sunyu Kim"
   }
 
