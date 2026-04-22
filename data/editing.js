@@ -42,6 +42,14 @@ var defined_editing_projects = [
     title:     "I Cook",
     position:  "Supervising Editor & Director of Photography",
     credits:   "Produced by Sunyu Kim, Directed by Heather Jarek and Eliza Salnikova"
+  },
+  
+  {
+    link:      "https://youtu.be/q6qsEIt9rYg?si=OWqCJeLcy5PpmqkC&t=5",
+    category:  "Advertisement",
+    title:     "BICC Promotional Film",
+    position:  "Editor, Director of Photography",
+    credits:   "Produced by Chris Berwick, Written and Directed by Sunyu Kim"
   }
   
 ];
