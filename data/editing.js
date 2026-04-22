@@ -24,7 +24,7 @@ var defined_editing_projects = [
     category:  "Short Documentary",
     title:     "Roots and Shoots",
     position:  "Editor",
-    credits:   "Produced by Fotis Begklis"
+    credits:   "Produced and Directed by Fotis Begklis"
   },
 
   {
@@ -33,7 +33,14 @@ var defined_editing_projects = [
     category:  "Vertical Short-Form Series",
     title:     "I Cook",
     position:  "Supervising Editor & Director of Photography",
-    credits:   "Produced by Sunyu Kim, Directed by Heather Jarek"
-  }
+    credits:   "Produced by Sunyu Kim, Directed by Heather Jarek and Eliza Salnikova"
+  },
+
+  {
+    link:      "https://youtu.be/gIi04r7BIA4?si=xbHnQag-mV21NRxV",
+    category:  "Visual Essay",
+    title:     "Subtitle and Dubbing: The Fine Balance Between The Artistic Vision and Accessibility?",
+    position:  "Editor, Writer, and Presenter",
+    credits:   "Produced by Sunyu Kim"
   
 ];
