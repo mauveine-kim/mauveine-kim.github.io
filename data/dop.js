@@ -47,9 +47,9 @@ var defined_dop_projects = [
     status:    "In Post-Production",
     thumbnail: "TOP.jpg",
     category:  "Short Documentary",
-    title:     "For the Taste of Persia",
+    title:     "For a Taste of Persia",
     position:  "Director of Photography",
-    credits:   "Produced by Yzael Sharif"
+    credits:   "Produced by Yzael Sharif, Directed by Ela Gorkay"
   },
 
   {
@@ -57,7 +57,7 @@ var defined_dop_projects = [
     category:  "Short Film",
     title:     "Unseen Frames",
     position:  "Director of Photography",
-    credits:   "Produced by Ian Fleming",
+    credits:   "Produced by Ian Fleming and Karen Ng, Directed by Eliza Salnikova",
     award:     "2025 UAL BAFTV Best Lighting Winner"
   },
 
@@ -67,7 +67,7 @@ var defined_dop_projects = [
     category:  "Vertical Short-Form Series",
     title:     "I Cook",
     position:  "Director of Photography & Supervising Editor",
-    credits:   "Produced by Sunyu Kim, Directed by Heather Jarek"
+    credits:   "Produced by Sunyu Kim, Directed by Heather Jarek and Eliza Salnikova"
   },
 
   {
@@ -84,7 +84,7 @@ var defined_dop_projects = [
     category:  "3D Animation",
     title:     "MarginAlice",
     position:  "Director of Photography (Live-Action)",
-    credits:   "Produced by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
+    credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
   },
 
   {
@@ -94,6 +94,14 @@ var defined_dop_projects = [
     title:     "Dizziak Advertisement",
     position:  "Director of Photography",
     credits:   "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
+  },
+  
+  {
+    link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
+    category:  "Short Film",
+    title:     "A New World",
+    position:  "Director of Photography",
+    credits:   "Produced by Reuben Carroll-Reid, Directed by Eliza Salnikova"
   },
   
   {
