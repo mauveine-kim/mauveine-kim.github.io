@@ -45,6 +45,34 @@ var defined_dop_projects = [
   {
     unreleased:true,
     status:    "In Post-Production",
+    thumbnail: "sts.png",
+    category:  "Short Film",
+    title:     "Still, The Stars",
+    position:  "Director of Photography",
+    credits:   "Produced by Esther Levin, Directed by Eliza Salnikova"
+  },
+  
+  {
+    unreleased:true,
+    status:    "In Post-Production",
+    thumbnail: "eos.png",
+    category:  "Short Documentary",
+    title:     "Echos of Stones",
+    position:  "Director of Photography",
+    credits:   "Produced and Directed by Eliza Salnikova"
+  },
+
+  {
+    link:      "https://www.youtube.com/watch?v=tC366Opaouo",
+    thumbnail: "anw.png",
+    category:  "Short Film",
+    title:     "A New World",
+    position:  "Director of Photography",
+    credits:   "Produced by Reuben Carroll-Reid, Directed by Eliza Salnikova"
+  },
+  
+  {
+    link:      "https://www.youtube.com/watch?v=QWvvrRJsB6I",
     thumbnail: "TOP.jpg",
     category:  "Short Documentary",
     title:     "For a Taste of Persia",
