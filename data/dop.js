@@ -44,7 +44,7 @@ var defined_dop_projects = [
 
   {
     unreleased:true,
-    status:    "In Post-Production",
+    status:    "In Colour-Grading",
     thumbnail: "sts.png",
     category:  "Short Film",
     title:     "Still, The Stars",
