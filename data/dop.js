@@ -61,15 +61,6 @@ var defined_dop_projects = [
     position:  "Director of Photography",
     credits:   "Produced and Directed by Eliza Salnikova"
   },
-
-  {
-    link:      "https://www.youtube.com/watch?v=tC366Opaouo",
-    thumbnail: "anw.png",
-    category:  "Short Film",
-    title:     "A New World",
-    position:  "Director of Photography",
-    credits:   "Produced by Reuben Carroll-Reid, Directed by Eliza Salnikova"
-  },
   
   {
     link:      "https://www.youtube.com/watch?v=QWvvrRJsB6I",
@@ -128,6 +119,7 @@ var defined_dop_projects = [
   
   {
     link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
+    thumbnail: "anw.png",
     category:  "Short Film",
     title:     "A New World",
     position:  "Director of Photography",
