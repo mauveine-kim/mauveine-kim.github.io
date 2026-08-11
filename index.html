@@ -88,6 +88,206 @@
         ::-webkit-scrollbar-track { background: var(--black); }
         ::-webkit-scrollbar-thumb { background: var(--muted); }
 
+        /* ── Showreel ── */
+        .showreel {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            background: #000;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .showreel__video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            background: #000;
+        }
+
+        .showreel__veil {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(180deg, rgba(0,0,0,0.28) 0%, transparent 18%, transparent 72%, rgba(0,0,0,0.55) 100%);
+            z-index: 1;
+        }
+
+        .showreel__mute {
+            position: absolute;
+            left: max(18px, env(safe-area-inset-left));
+            bottom: max(52px, calc(env(safe-area-inset-bottom) + 44px));
+            top: auto;
+            z-index: 4;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(240, 236, 230, 0.28);
+            background: rgba(8, 8, 8, 0.45);
+            color: var(--white);
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: border-color 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+        }
+
+        .showreel__mute:hover {
+            border-color: var(--accent);
+            background: rgba(8, 8, 8, 0.7);
+        }
+
+        .showreel__mute svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .showreel__mute[aria-pressed="false"] .showreel__mute-off { display: none; }
+        .showreel__mute[aria-pressed="true"] .showreel__mute-on { display: none; }
+
+        .showreel__bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 3;
+            padding: 0 clamp(20px, 4vw, 40px) max(18px, env(safe-area-inset-bottom));
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .showreel__progress {
+            flex: 1;
+            height: 2px;
+            background: rgba(240, 236, 230, 0.18);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+        }
+
+        .showreel__progress::-webkit-progress-bar {
+            background: rgba(240, 236, 230, 0.18);
+        }
+
+        .showreel__progress::-webkit-progress-value {
+            background: var(--accent);
+            transition: width 0.1s linear;
+        }
+
+        .showreel__progress::-moz-progress-bar {
+            background: var(--accent);
+        }
+
+        .showreel__repeat {
+            z-index: 3;
+            width: 34px;
+            height: 34px;
+            flex-shrink: 0;
+            border: 1px solid rgba(240, 236, 230, 0.28);
+            background: rgba(8, 8, 8, 0.45);
+            color: var(--white);
+            cursor: pointer;
+            display: none;
+            place-items: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: border-color 0.3s ease, opacity 0.35s ease, transform 0.35s ease;
+            opacity: 0;
+            transform: scale(0.92);
+        }
+
+        .showreel__repeat.is-visible {
+            display: grid;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .showreel__repeat:hover {
+            border-color: var(--accent);
+        }
+
+        .showreel__repeat svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .showreel__scroll {
+            position: absolute;
+            left: 50%;
+            bottom: max(56px, calc(env(safe-area-inset-bottom) + 48px));
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--light);
+            opacity: 0;
+            animation: fadeIn 1.2s ease 1.4s forwards;
+            transition: color 0.3s ease, opacity 0.4s ease;
+        }
+
+        .showreel__scroll:hover {
+            color: var(--accent);
+        }
+
+        .showreel__scroll-label {
+            font-family: var(--mono);
+            font-size: 0.55rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+        }
+
+        .showreel__scroll-line {
+            width: 1px;
+            height: 36px;
+            background: linear-gradient(180deg, var(--accent), transparent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showreel__scroll-line::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            animation: showreelScrollPulse 1.8s ease-in-out infinite;
+        }
+
+        .showreel.is-ended .showreel__scroll {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes showreelScrollPulse {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
         /* ── Layout ── */
         .page {
             position: relative;
@@ -119,7 +319,6 @@
             margin-bottom: 2rem;
             opacity: 0;
             transform: translateY(12px);
-            animation: fadeUp 1s ease 0.3s forwards;
         }
 
         .hero__name {
@@ -132,7 +331,6 @@
             margin-bottom: 1.5rem;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeUp 1.2s ease 0.5s forwards;
             white-space: nowrap;
         }
 
@@ -151,7 +349,6 @@
             opacity: 0;
             transform: scaleX(0);
             transform-origin: left;
-            animation: scaleIn 0.8s ease 0.9s forwards;
         }
 
         .hero__title {
@@ -163,7 +360,6 @@
             margin-bottom: 0.75rem;
             opacity: 0;
             transform: translateY(12px);
-            animation: fadeUp 1s ease 1.1s forwards;
         }
 
         .hero__subtitle {
@@ -174,7 +370,6 @@
             color: var(--dim);
             opacity: 0;
             transform: translateY(12px);
-            animation: fadeUp 1s ease 1.3s forwards;
         }
 
         .hero__contact-link {
@@ -187,7 +382,6 @@
             text-underline-offset: 4px;
             opacity: 0;
             transform: translateY(12px);
-            animation: fadeUp 1s ease 1.5s forwards;
             margin-top: 1.5rem;
             display: inline-block;
             transition: color 0.3s ease;
@@ -195,6 +389,16 @@
 
         .hero__contact-link:hover {
             color: var(--accent);
+        }
+
+        .page.is-arrived .hero__eyebrow { animation: fadeUp 1s ease 0.15s forwards; }
+        .page.is-arrived .hero__name { animation: fadeUp 1.2s ease 0.3s forwards; }
+        .page.is-arrived .hero__rule { animation: scaleIn 0.8s ease 0.55s forwards; }
+        .page.is-arrived .hero__title { animation: fadeUp 1s ease 0.7s forwards; }
+        .page.is-arrived .hero__subtitle { animation: fadeUp 1s ease 0.9s forwards; }
+        .page.is-arrived .hero__contact-link { animation: fadeUp 1s ease 1.05s forwards; }
+        .page.is-arrived .hero__scroll-cue {
+            animation: fadeIn 1s ease 1.3s forwards, arrowDown 1.5s ease-in-out 1.3s infinite;
         }
 
         .hero__scroll-cue {
@@ -208,7 +412,6 @@
             justify-content: center;
             gap: 8px;
             opacity: 0;
-            animation: fadeIn 1s ease 2s forwards;
             padding: 20px 28px;
             text-decoration: none;
             cursor: pointer;
@@ -221,10 +424,6 @@
             border-right: 1.5px solid var(--light);
             border-bottom: 1.5px solid var(--light);
             transform: rotate(45deg);
-        }
-
-        .hero__scroll-cue {
-            animation: fadeIn 1s ease 2s forwards, arrowDown 1.5s ease-in-out 2s infinite;
         }
 
         @keyframes arrowDown {
@@ -884,7 +1083,62 @@
     <!-- Timecode -->
     <div class="timecode" id="timecode">00:00:00:00</div>
 
-    <div class="page">
+    <!-- Showreel -->
+    <section class="showreel" id="showreel" aria-label="Showreel">
+        <video
+            class="showreel__video"
+            id="showreel-video"
+            src="./assets/video/showreel.mp4"
+            muted
+            playsinline
+            preload="auto"
+            disablepictureinpicture
+        ></video>
+        <div class="showreel__veil" aria-hidden="true"></div>
+
+        <button
+            type="button"
+            class="showreel__mute"
+            id="showreel-mute"
+            aria-label="Unmute showreel"
+            aria-pressed="true"
+            title="Unmute"
+        >
+            <svg class="showreel__mute-on" viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="4 9 9 9 14 5 14 19 9 15 4 15 4 9"></polygon>
+                <line x1="17" y1="9" x2="22" y2="15"></line>
+                <line x1="22" y1="9" x2="17" y2="15"></line>
+            </svg>
+            <svg class="showreel__mute-off" viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="4 9 9 9 14 5 14 19 9 15 4 15 4 9"></polygon>
+                <path d="M17 9.5a4 4 0 0 1 0 5"></path>
+                <path d="M19.5 7a7 7 0 0 1 0 10"></path>
+            </svg>
+        </button>
+
+        <div class="showreel__bar">
+            <progress class="showreel__progress" id="showreel-progress" value="0" max="100" aria-label="Showreel progress"></progress>
+            <button
+                type="button"
+                class="showreel__repeat"
+                id="showreel-repeat"
+                aria-label="Replay showreel"
+                title="Replay"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 12a9 9 0 1 0 3-6.7"></path>
+                    <polyline points="3 4 3 10 9 10"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <a href="#landing" class="showreel__scroll" id="showreel-scroll" aria-label="Scroll to portfolio">
+            <span class="showreel__scroll-label">Scroll</span>
+            <span class="showreel__scroll-line" aria-hidden="true"></span>
+        </a>
+    </section>
+
+    <div class="page" id="landing">
         <div class="container">
 
             <!-- Hero -->
@@ -1213,6 +1467,189 @@
             requestAnimationFrame(updateTimecode);
         }
         requestAnimationFrame(updateTimecode);
+
+        /* ── Showreel ── */
+        (function() {
+            var video = document.getElementById('showreel-video');
+            var muteBtn = document.getElementById('showreel-mute');
+            var progress = document.getElementById('showreel-progress');
+            var repeatBtn = document.getElementById('showreel-repeat');
+            var showreel = document.getElementById('showreel');
+            var landing = document.getElementById('landing');
+            if (!video || !showreel || !landing) return;
+
+            var AUTO_SCROLL_AT = 55;
+            var AUTO_SCROLL_MS = 3200;
+            var hasAutoScrolled = false;
+            var userInterrupted = false;
+            var isAutoScrolling = false;
+            var autoScrollRaf = null;
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function tryPlay() {
+                video.muted = true;
+                var playPromise = video.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function() {
+                        var unlock = function() {
+                            video.play().catch(function() {});
+                            document.removeEventListener('pointerdown', unlock);
+                            document.removeEventListener('touchstart', unlock);
+                            document.removeEventListener('keydown', unlock);
+                        };
+                        document.addEventListener('pointerdown', unlock, { once: true });
+                        document.addEventListener('touchstart', unlock, { once: true });
+                        document.addEventListener('keydown', unlock, { once: true });
+                    });
+                }
+            }
+
+            function setMutedUI(muted) {
+                muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+                muteBtn.setAttribute('aria-label', muted ? 'Unmute showreel' : 'Mute showreel');
+                muteBtn.title = muted ? 'Unmute' : 'Mute';
+            }
+
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function slowScrollToLanding() {
+                if (hasAutoScrolled || userInterrupted || reduceMotion) return;
+                hasAutoScrolled = true;
+                isAutoScrolling = true;
+                revealLanding();
+
+                var startY = window.scrollY || window.pageYOffset;
+                var targetY = landing.getBoundingClientRect().top + startY;
+                var distance = targetY - startY;
+                if (Math.abs(distance) < 8) {
+                    isAutoScrolling = false;
+                    return;
+                }
+
+                var start = performance.now();
+
+                function step(now) {
+                    if (userInterrupted) {
+                        autoScrollRaf = null;
+                        isAutoScrolling = false;
+                        return;
+                    }
+                    var t = Math.min(1, (now - start) / AUTO_SCROLL_MS);
+                    window.scrollTo(0, startY + distance * easeInOutCubic(t));
+                    if (t < 1) {
+                        autoScrollRaf = requestAnimationFrame(step);
+                    } else {
+                        autoScrollRaf = null;
+                        isAutoScrolling = false;
+                    }
+                }
+
+                autoScrollRaf = requestAnimationFrame(step);
+            }
+
+            function markUserInterrupt() {
+                if (isAutoScrolling || hasAutoScrolled) return;
+                userInterrupted = true;
+                if (autoScrollRaf) {
+                    cancelAnimationFrame(autoScrollRaf);
+                    autoScrollRaf = null;
+                    isAutoScrolling = false;
+                }
+            }
+
+            muteBtn.addEventListener('click', function() {
+                video.muted = !video.muted;
+                if (!video.muted && video.paused) {
+                    video.play().catch(function() {});
+                }
+                setMutedUI(video.muted);
+            });
+
+            repeatBtn.addEventListener('click', function() {
+                showreel.classList.remove('is-ended');
+                repeatBtn.classList.remove('is-visible');
+                video.currentTime = 0;
+                video.play().catch(function() {});
+            });
+
+            video.addEventListener('timeupdate', function() {
+                if (video.duration && isFinite(video.duration)) {
+                    progress.value = (video.currentTime / video.duration) * 100;
+                }
+                if (!hasAutoScrolled && !userInterrupted && video.currentTime >= AUTO_SCROLL_AT) {
+                    slowScrollToLanding();
+                }
+            });
+
+            video.addEventListener('ended', function() {
+                showreel.classList.add('is-ended');
+                repeatBtn.classList.add('is-visible');
+                progress.value = 100;
+                if (!hasAutoScrolled && !userInterrupted) {
+                    slowScrollToLanding();
+                }
+            });
+
+            video.addEventListener('play', function() {
+                showreel.classList.remove('is-ended');
+                repeatBtn.classList.remove('is-visible');
+            });
+
+            window.addEventListener('wheel', markUserInterrupt, { passive: true });
+            window.addEventListener('touchmove', markUserInterrupt, { passive: true });
+            window.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                    markUserInterrupt();
+                }
+            });
+
+            document.getElementById('showreel-scroll').addEventListener('click', function(e) {
+                e.preventDefault();
+                userInterrupted = true;
+                hasAutoScrolled = true;
+                isAutoScrolling = false;
+                revealLanding();
+                if (autoScrollRaf) {
+                    cancelAnimationFrame(autoScrollRaf);
+                    autoScrollRaf = null;
+                }
+                if (reduceMotion) {
+                    landing.scrollIntoView();
+                } else {
+                    landing.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            function revealLanding() {
+                landing.classList.add('is-arrived');
+            }
+
+            setMutedUI(true);
+            tryPlay();
+
+            var hero = landing.querySelector('.hero');
+            if (hero && 'IntersectionObserver' in window) {
+                var landingObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            revealLanding();
+                            landingObserver.disconnect();
+                        }
+                    });
+                }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+                landingObserver.observe(hero);
+            } else {
+                revealLanding();
+            }
+
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden && video.paused && !showreel.classList.contains('is-ended')) {
+                    tryPlay();
+                }
+            });
+        })();
     </script>
 
 </body>
