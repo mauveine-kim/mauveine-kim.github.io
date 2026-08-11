@@ -45,7 +45,7 @@ var defined_dop_projects = [
   {
     unreleased:true,
     status:    "In Colour-Grading",
-    thumbnail: "sts.png",
+    thumbnail: "sts.jpg",
     category:  "Short Film",
     title:     "Still, The Stars",
     position:  "Director of Photography",
@@ -55,7 +55,7 @@ var defined_dop_projects = [
   {
     unreleased:true,
     status:    "In Post-Production",
-    thumbnail: "eos.png",
+    thumbnail: "eos.jpg",
     category:  "Short Documentary",
     title:     "Echos of Stones",
     position:  "Director of Photography",
@@ -119,7 +119,7 @@ var defined_dop_projects = [
   
   {
     link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
-    thumbnail: "anw.png",
+    thumbnail: "anw.jpg",
     category:  "Short Film",
     title:     "A New World",
     position:  "Director of Photography",
