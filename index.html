@@ -174,8 +174,8 @@
             stroke-linejoin: round;
         }
 
-        .showreel__mute[aria-pressed="false"] .showreel__mute-off { display: none; }
-        .showreel__mute[aria-pressed="true"] .showreel__mute-on { display: none; }
+        .showreel__mute[aria-pressed="true"] .showreel__mute-off { display: none; }
+        .showreel__mute[aria-pressed="false"] .showreel__mute-on { display: none; }
 
         .showreel__bar {
             position: absolute;
@@ -193,8 +193,8 @@
 
         .showreel__progress {
             flex: 1;
-            height: 2px;
-            background: rgba(240, 236, 230, 0.18);
+            height: 18px;
+            background: transparent;
             border: none;
             padding: 0;
             cursor: pointer;
@@ -205,10 +205,13 @@
 
         .showreel__progress::-webkit-progress-bar {
             background: rgba(240, 236, 230, 0.18);
+            height: 2px;
+            margin-top: 8px;
         }
 
         .showreel__progress::-webkit-progress-value {
             background: var(--accent);
+            height: 2px;
             transition: width 0.1s linear;
         }
 
@@ -1536,7 +1539,7 @@
             if (!video || !showreel || !landing) return;
 
             var AUTO_SCROLL_AT = 55;
-            var AUTO_SCROLL_MS = 3200;
+            var AUTO_SCROLL_MS = 3000;
             var MAX_DIM = 0.5;
             var hasAutoScrolled = false;
             var userInterrupted = false;
@@ -1650,6 +1653,19 @@
                     video.play().catch(function() {});
                 }
                 setMutedUI(video.muted);
+            });
+
+            progress.addEventListener('click', function(e) {
+                if (!video.duration || !isFinite(video.duration)) return;
+                var rect = progress.getBoundingClientRect();
+                if (!rect.width) return;
+                var ratio = (e.clientX - rect.left) / rect.width;
+                ratio = Math.max(0, Math.min(1, ratio));
+                showreel.classList.remove('is-ended');
+                repeatBtn.classList.remove('is-visible');
+                video.currentTime = ratio * video.duration;
+                progress.value = ratio * 100;
+                video.play().catch(function() {});
             });
 
             repeatBtn.addEventListener('click', function() {
