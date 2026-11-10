@@ -53,8 +53,7 @@ var defined_dop_projects = [
   },
   
   {
-    unreleased:true,
-    status:    "In Post-Production",
+    link:      "https://youtu.be/swTDIvzQNmE",
     thumbnail: "eos.jpg",
     category:  "Short Documentary",
     title:     "Echos of Stones",
