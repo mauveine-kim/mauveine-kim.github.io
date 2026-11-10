@@ -11,7 +11,7 @@
 var defined_editing_projects = [
 
   {
-    unreleased:"true",
+    unreleased:true,
     status:    "In Sound Design",
     thumbnail: "for.jpg",
     category:  "Short Film",
