@@ -13,6 +13,7 @@ var defined_editing_projects = [
   {
     unreleased:"true",
     status:    "In Sound Design",
+    thumbnail: "for.jpg",
     category:  "Short Film",
     title:     "Formality",
     position:  "Editor, Colour Grade, & Assistant Camera",
