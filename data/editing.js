@@ -11,11 +11,20 @@
 var defined_editing_projects = [
 
   {
+    unreleased:"true",
+    status:    "In Sound Design",
+    category:  "Short Film",
+    title:     "Formality",
+    position:  "Editor, Colour Grade, & Assistant Camera",
+    credits:   "Directed by Eliza Salnikova and Esther Levin"
+  },
+
+  {
     link:      "https://youtu.be/pWv0mbeIi3I?si=WO7s__mqqM5VXSXH",
     category:  "Short Film",
     title:     "Dreams",
     position:  "Editor, VFX, & Sound Design",
-    credits:   "Produced by Ester Levin",
+    credits:   "Produced by Esther Levin, Directed by Eliza Salnikova",
     award:     "Febuary 2026 Absurd Film Festival Best Drama Winner"
   },
   
@@ -23,7 +32,7 @@ var defined_editing_projects = [
     link:      "https://youtu.be/gIi04r7BIA4?si=xbHnQag-mV21NRxV",
     category:  "Visual Essay",
     title:     "Subtitle and Dubbing: The Fine Balance Between The Artistic Vision and Accessibility?",
-    position:  "Editor, Writer, and Presenter",
+    position:  "Editor, Writer, & Presenter",
     credits:   "Produced by Sunyu Kim"
   },
   
