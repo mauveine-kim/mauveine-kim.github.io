@@ -61,15 +61,6 @@ var defined_dop_projects = [
     credits:   "Produced and Directed by Eliza Salnikova",
     award:     "2026 Athens International Monthly Art Film Festival Honourable Mention - Best Documentary"
   },
-  
-  {
-    link:      "https://www.youtube.com/watch?v=QWvvrRJsB6I",
-    thumbnail: "TOP.jpg",
-    category:  "Short Documentary",
-    title:     "For a Taste of Persia",
-    position:  "Director of Photography",
-    credits:   "Produced by Yzael Sharif, Directed by Ela Gorkay"
-  },
 
   {
     link:      "https://youtu.be/qgGrbOM78Mg?si=q2Sys5EyB8931tLc",
@@ -90,14 +81,6 @@ var defined_dop_projects = [
   },
   
   {
-    link:      "https://youtu.be/BSrgDQrSE0s?si=onwEPyoDvhTue9fj",
-    category:  "Short Film",
-    title:     "The Void",
-    position:  "Director of Photography",
-    credits:   "Produced and Directed by Eliza Salnikova"
-  },
-  
-  {
     link:      "https://youtu.be/CuuKFYdM7F8?si=e0v_fHnwZq9oV-lZ",
     thumbnail: "DIZ.jpg",
     category:  "Advertisement",
@@ -105,7 +88,24 @@ var defined_dop_projects = [
     position:  "Director of Photography",
     credits:   "Produced by Marco Capelli, et al., Directed by Pratham Bhatia"
   },
+
+  {
+    link:      "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
+    category:  "Live-Concert",
+    title:     "Dog Saints at The George Tavern",
+    position:  "Director of Photography",
+    credits:   "Produced by Sunyu Kim"
+  },
   
+  {
+    link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
+    thumbnail: "MA.jpg",
+    category:  "3D Animation",
+    title:     "MarginAlice",
+    position:  "Director of Photography (Live-Action)",
+    credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
+  },
+    
   {
     unreleased:true,
     status:    "In Production",
@@ -116,7 +116,25 @@ var defined_dop_projects = [
     credits:   "Produced by Fotis Begklis",
     award:     "2025 Arts Awards Student and Staff Collaboration of the Year"
   },
+    
+  {
+    link:      "https://youtu.be/4MdxOwCse2o?si=O5n3rJzKMRvhElys",
+    category:  "Short Documentary",
+    title:     "The London I Saw",
+    position:  "Extra Footage Camera Operator",
+    credits:   "Produced by Eliza Salnikova",
+    award:     "Royal Television Society Student TV Awards 2025 - Editing"
+  },
   
+  {
+    link:      "https://www.youtube.com/watch?v=QWvvrRJsB6I",
+    thumbnail: "TOP.jpg",
+    category:  "Short Documentary",
+    title:     "For a Taste of Persia",
+    position:  "Director of Photography",
+    credits:   "Produced by Yzael Sharif, Directed by Ela Gorkay"
+  },
+
   {
     link:      "https://youtu.be/-jH-Wox2sc8?si=W-ZkBdCRok4IvFK9",
     thumbnail: "anw.jpg",
@@ -127,13 +145,13 @@ var defined_dop_projects = [
   },
   
   {
-    link:      "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
-    category:  "Live-Concert",
-    title:     "Dog Saints at The George Tavern",
+    link:      "https://youtu.be/BSrgDQrSE0s?si=onwEPyoDvhTue9fj",
+    category:  "Short Film",
+    title:     "The Void",
     position:  "Director of Photography",
-    credits:   "Produced by Sunyu Kim"
+    credits:   "Produced and Directed by Eliza Salnikova"
   },
-
+  
   {
     link:      "https://youtu.be/rRAVlv0GYyE?si=Eeo1_wyl2fuGtab2",
     category:  "Short Documentary",
@@ -149,25 +167,7 @@ var defined_dop_projects = [
     position:  "Director of Photography & Editor",
     credits:   "Produced by Aashika Mamgain and Sunyu Kim, Directed by Heather Jarek"
   },
-  
-  {
-    link:      "https://www.behance.net/gallery/197468023/MarginaliaAlice",
-    thumbnail: "MA.jpg",
-    category:  "3D Animation",
-    title:     "MarginAlice",
-    position:  "Director of Photography (Live-Action)",
-    credits:   "Produced and Directed by Yolanda Zhang, Tiffany Otoyo, and Vallerie Toumahu"
-  },
-  
-  {
-    link:      "https://youtu.be/4MdxOwCse2o?si=O5n3rJzKMRvhElys",
-    category:  "Short Documentary",
-    title:     "The London I Saw",
-    position:  "Extra Footage Camera Operator",
-    credits:   "Produced by Eliza Salnikova",
-    award:     "Royal Television Society Student TV Awards 2025 - Editing"
-  },
-  
+
   {
     link:      "https://youtu.be/19qQ3qHKrDU?si=0PH7bsf5kWeyUl-A",
     category:  "Review",
