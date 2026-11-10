@@ -58,7 +58,8 @@ var defined_dop_projects = [
     category:  "Short Documentary",
     title:     "Echos of Stones",
     position:  "Director of Photography",
-    credits:   "Produced and Directed by Eliza Salnikova"
+    credits:   "Produced and Directed by Eliza Salnikova",
+    award:     "2026 Athens International Monthly Art Film Festival Honourable Mention - Best Documentary"
   },
   
   {
