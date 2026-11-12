@@ -15,3 +15,10 @@
 var photo_count = 55;
 
 var photo_blacklist = [29, 41, 42];
+
+/*
+ * 맨 위에 전체 폭으로 크게 보여줄 사진 번호.
+ * 예: 6번 사진 → var photo_featured = 6;
+ * 사용하지 않으려면 → var photo_featured = 0;
+ */
+var photo_featured = 6;

@@ -726,6 +726,32 @@
             flex-shrink: 0;
         }
 
+        /* ── Featured Photo (full bleed) ── */
+        .photo-feature:empty {
+            display: none;
+        }
+
+        .photo-feature {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-bottom: 8px;
+            background: var(--surface);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .photo-feature img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .photo-feature.is-loaded img {
+            opacity: 1;
+        }
+
         /* ── Photo Grid ── */
         .photo-grid {
             columns: 3;
@@ -988,6 +1014,31 @@
             color: var(--accent);
         }
 
+        .contact-phones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .contact-phone {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .contact-phone:hover .contact-block__value {
+            color: var(--accent);
+        }
+
+        .contact-phone__country {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            min-width: 2em;
+        }
+
         /* ── Download CV (big & bright) ── */
         .cv-link {
             display: inline-flex;
@@ -1239,6 +1290,7 @@
 
                 <!-- Tab: Still Photography (loaded from data/photos.js) -->
                 <div class="tab-panel" id="tab-photo">
+                    <div class="photo-feature" id="photo-feature"></div>
                     <div class="photo-grid" id="photo-grid"></div>
                 </div>
 
@@ -1253,7 +1305,7 @@
                 <div class="contact-grid reveal reveal-delay-1">
                     <div class="contact-block">
                         <div class="contact-block__label">Telephone</div>
-                        <a href="tel:+491733653282" class="contact-block__value">+49 173 3653282</a>
+                        <div class="contact-phones" id="contact-phones"></div>
                     </div>
                     <div class="contact-block">
                         <div class="contact-block__label">Email</div>
@@ -1261,7 +1313,7 @@
                     </div>
                 </div>
                 <div class="reveal reveal-delay-2">
-                    <a href="./CV_SunyuKim.pdf" class="cv-link" download>
+                    <a href="./SunyuKim_CV.pdf" class="cv-link" download>
                         Download CV
                         <span class="cv-link__arrow"></span>
                     </a>
@@ -1292,6 +1344,7 @@
     <script src="./data/dop.js"></script>
     <script src="./data/editing.js"></script>
     <script src="./data/photos.js"></script>
+    <script src="./data/contact.js"></script>
 
     <script>
         /* ── Scroll Reveal ── */
@@ -1384,15 +1437,43 @@
         renderProjects('list-dop', defined_dop_projects);
         renderProjects('list-editing', defined_editing_projects);
 
-        /* ── Load Photos (001.jpg ~ photo_count.jpg, skip blacklist, randomize) ── */
+        /* ── Contact phones (from data/contact.js) ── */
+        (function() {
+            var list = document.getElementById('contact-phones');
+            var phones = typeof contact_phones !== 'undefined' ? contact_phones : [];
+            phones.forEach(function(phone) {
+                var row = document.createElement('a');
+                row.className = 'contact-phone';
+                row.href = 'tel:' + (phone.number || '').replace(/[^\d+]/g, '');
+                row.innerHTML =
+                    '<span class="contact-phone__country">' + esc(phone.country) + '</span>' +
+                    '<span class="contact-block__value">' + esc(phone.number) + '</span>';
+                list.appendChild(row);
+            });
+        })();
+
+        /* ── Load Photos (001.jpg ~ photo_count.jpg, skip blacklist, randomize, featured first) ── */
         var photoSources = [];
         (function() {
             var grid = document.getElementById('photo-grid');
             var bl = typeof photo_blacklist !== 'undefined' ? photo_blacklist : [];
+            var featured = typeof photo_featured !== 'undefined' ? photo_featured : 0;
             var indices = [];
             for (var i = 1; i <= photo_count; i++) {
-                if (bl.indexOf(i) !== -1) continue;
+                if (bl.indexOf(i) !== -1 || i === featured) continue;
                 indices.push(i);
+            }
+
+            if (featured > 0 && featured <= photo_count && bl.indexOf(featured) === -1) {
+                var featureEl = document.getElementById('photo-feature');
+                var featureSrc = './assets/photos/' + String(featured).padStart(3, '0') + '.jpg';
+                photoSources.push(featureSrc);
+                featureEl.dataset.photoIndex = 0;
+                var featureImg = document.createElement('img');
+                featureImg.src = featureSrc;
+                featureImg.alt = 'Photograph';
+                featureImg.onload = function() { featureEl.classList.add('is-loaded'); };
+                featureEl.appendChild(featureImg);
             }
             /* Fisher-Yates shuffle */
             for (var j = indices.length - 1; j > 0; j--) {
@@ -1440,8 +1521,8 @@
                 lightboxImg.src = photoSources[currentIndex];
             }
 
-            document.getElementById('photo-grid').addEventListener('click', function(e) {
-                var item = e.target.closest('.photo-grid__item');
+            document.getElementById('tab-photo').addEventListener('click', function(e) {
+                var item = e.target.closest('[data-photo-index]');
                 if (!item) return;
                 openLightbox(parseInt(item.dataset.photoIndex, 10));
             });
