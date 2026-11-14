@@ -26,7 +26,7 @@ var defined_editing_projects = [
     title:     "Dreams",
     position:  "Editor, VFX, & Sound Design",
     credits:   "Produced by Esther Levin, Directed by Eliza Salnikova",
-    award:     "Febuary 2026 Absurd Film Festival Best Drama Winner"
+    award:     "February 2026 Absurd Film Festival Best Drama Winner"
   },
   
   {
@@ -41,7 +41,7 @@ var defined_editing_projects = [
     link:      "https://youtu.be/n0NIlDC9T4g?si=kqNgLOZKPMizpkHL",
     category:  "Short Documentary",
     title:     "Roots and Shoots",
-    position:  "Editor",
+    position:  "Editor, Sound Mixer, & Colour Grader",
     credits:   "Produced and Directed by Fotis Begklis"
   },
 
