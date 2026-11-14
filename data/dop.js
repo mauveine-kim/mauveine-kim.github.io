@@ -56,7 +56,7 @@ var defined_dop_projects = [
     link:      "https://youtu.be/swTDIvzQNmE",
     thumbnail: "eos.jpg",
     category:  "Short Documentary",
-    title:     "Echos of Stones",
+    title:     "Echoes of Stones",
     position:  "Director of Photography",
     credits:   "Produced and Directed by Eliza Salnikova",
     award:     "2026 Athens International Monthly Art Film Festival Honourable Mention - Best Documentary"
@@ -92,8 +92,8 @@ var defined_dop_projects = [
   {
     link:      "https://youtu.be/WddHcq3gxCM?si=jfFQOdGJZCSvwT4o",
     category:  "Live-Concert",
-    title:     "Dog Saints at The George Tavern",
-    position:  "Director of Photography",
+    title:     "Dog Saints at the George Tavern",
+    position:  "Roaming Camera",
     credits:   "Produced by Sunyu Kim"
   },
   
